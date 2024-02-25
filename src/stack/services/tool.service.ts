@@ -28,6 +28,7 @@ export class ToolService {
       const [data, total] = await Promise.all([
         this.toolRepository
           .createQueryBuilder('tool')
+          .leftJoinAndSelect('tool.label', 'label')
           .where('tool.languageId =:id', { id: language.id })
           .take(limit)
           .skip(effectiveOffset)
