@@ -1,5 +1,16 @@
+/dist
+/node_modules
+/build
 .vscode
-dist
-node_modules
 postgres
 package-lock.json
+
+# test folder
+/test
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
