@@ -11,4 +11,9 @@ export const schemaValidation = joi.object({
   DB_LOAD: joi.boolean().default(false).required(),
   DB_SYNC: joi.boolean().default(false).required(),
   DB_SCHEMA: joi.string().required(),
+  CLIENT_GITHUB_BASE_URL: joi.string().required(),
+  JWT_SECRET: joi.string().required(),
+  JWT_EXPIRES: joi.string().default('1h').required(),
+  JWT_PAYLOAD_AUD: joi.string().required(),
+  JWT_PAYLOAD_ISS: joi.string().required(),
 });
